@@ -75,8 +75,13 @@ export default {
         .then((response) => (this.BillerList = response.data));
     },
 
-    updateBiller(billerId) {
+    async updateBiller(billerId) {
       console.log(billerId);
+      localStorage.billerId = billerId;
+      this.$router.push('/register');
+      // try{
+      //   await axios.put(baseURL + 'update/' + billerId,)
+      // }
     },
 
     async deleteBiller(billerId) {

@@ -6,7 +6,7 @@
           <div class="column">
             <form action @submit.prevent="registerForm">
               <vue-form-generator tag="div" :schema="schema" :model="model"></vue-form-generator>
-              <b-button @click="registerForm" type="is-primary">Register</b-button>
+              <b-button class="mt-2" expanded @click="registerForm" type="is-primary">{{buttonMsg}}</b-button>
             </form>
           </div>
         </div>
@@ -29,7 +29,15 @@ export default {
   components: {
     "vue-form-generator": VueFormGenerator.component,
   },
-  mounted() {},
+  mounted() {
+    if(localStorage?.billerId){
+      this.getBillerById(localStorage.billerId);
+      this.buttonMsg = 'Update';
+      localStorage.removeItem('billerId');
+    }else{
+      this.buttonMsg = 'Register';
+    }
+  },
   data() {
     return {
       model: {
@@ -41,9 +49,16 @@ export default {
         phoneNumber: "",
       },
       schema: registerSchema,
+      buttonMsg: '',
     };
   },
   methods: {
+    getBillerById(billerId) {
+      axios.get(baseURL + 'getBillerById/' + billerId).then((response) => {
+        this.model = response.data;
+      });
+    },
+
     async registerForm() {
       try {
         await axios.post(baseURL + "saveBiller", {
@@ -51,16 +66,9 @@ export default {
         });
         alert("Registered Successfully!");
       } catch (e) {
-        console.log(e);
         alert(e.message);
       }
-    },
-    // registerForm() {
-    //   console.log(this.model, "MODElForm");
-    //   axios
-    //     .post(baseURL + "saveBiller", { ...this.model })
-    //     .then(alert("Saved Successfully!"));
-    // },
+    }
   },
 };
 </script>

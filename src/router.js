@@ -20,6 +20,11 @@ export default new Router({
       path: '/billerList',
       name: 'DisplayTable',
       component: DisplayTable
+    },
+    {
+      path: '/update',
+      name: 'register',
+      component: Register
     }
   ]
 })
