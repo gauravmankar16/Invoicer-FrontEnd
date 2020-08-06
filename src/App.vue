@@ -1,33 +1,24 @@
 <template>
   <div id="app">
-    <DisplayTable/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import DisplayTable from './components/DisplayTable.vue'
 import Vue from 'vue'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
+import VueFormGenerator from 'vue-form-generator'
+
+Vue.use(VueFormGenerator);
 
 Vue.use(Buefy)
 
-export default {
-  
-  name: 'App',
-  components: {
-    DisplayTable
-  }
+export default {  
+  name: 'App'
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+ @import 'src/assets/scss/app.scss';
 </style>

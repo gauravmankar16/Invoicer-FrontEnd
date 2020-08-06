@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+
+  // Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+$primary: #ebe052;
+$secondary: #807e7e;
+$link: #807e7e;
+
+//Custom styling
+
+
+//Body
+$body-background-color: #ffffff;
+$body-color: #0d0d0d;
+
+//input configuration
+$input-border-color: #000000;
+$input-hover-border-color: #000000;
+$input-focus-border-color: #000000;
+$input-radius: 0;
+
+$label-weight: normal;
+$label-color: #0d0d0d;
+
+
+//Typography size settings
+$size-1: 2.25rem;
+
+//Button settings
+$button-border-width: 0;
+
+
+
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+//Custom margin
+.mb1 {
+  margin-bottom: 1rem!important;
+}
+.mb2 {
+  margin-bottom: 2rem!important;
+}
+.mb2-5{
+  margin-bottom: 2.5rem!important;
+}
+.mb3 {
+  margin-bottom: 3rem!important;
+}
+.mb5{
+  margin-bottom: 5.625rem!important;
+}
+
+.mt1 {
+  margin-top: 1rem!important;
+}
+.mt2 {
+  margin-top: 2rem!important;
+}
+.mt2-5{
+  margin-top: 2.5rem!important;
+}
+.mt3 {
+  margin-top: 3rem!important;
+}
+.mt5{
+  margin-top: 5.625rem!important;
+}
+.ml1{
+  margin-left: 1rem;
+}
+.ml2{
+  margin-left: 2rem;
+}
+.mr1{
+    margin-right: 1rem;;
+}
+.mr2{
+  margin-left: 2rem;
+}
+.mx2{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+//Input box css
+.input {
+  border-width: 1px;
+}
+
+.button{
+  border-radius: 0;
+}
+
+//mouse hand cursoe
+.handCursor{
+    cursor: pointer;
+}
