@@ -8,9 +8,6 @@
 import Vue from 'vue'
 import Buefy from 'buefy'
 import 'buefy/dist/buefy.css'
-import VueFormGenerator from 'vue-form-generator'
-
-Vue.use(VueFormGenerator);
 
 Vue.use(Buefy)
 

@@ -25,7 +25,8 @@ export default {
                     inputType: 'email',
                     label: 'Email',
                     model: 'email'
-                }
+                },
+                
             ]
         }
     ]

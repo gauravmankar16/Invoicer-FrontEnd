@@ -71,7 +71,7 @@ export default {
     getBiller() {
       console.log(this.baseURL, "base");
       axios
-        .get(baseURL + "getAll")
+        .get(baseURL + "api/getAll")
         .then((response) => (this.BillerList = response.data));
     },
 

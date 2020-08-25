@@ -5,7 +5,7 @@
 
 // Set your brand colors
 $purple: #8A4D76;
-$pink: #FA7C91;
+$pink: #FDF5E6;
 $brown: #757763;
 $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
@@ -25,8 +25,8 @@ $control-border-width: 2px;
 $input-border-color: transparent;
 $input-shadow: none;
 
-$primary: #ebe052;
-$secondary: #807e7e;
+$primary: #5DADE2;
+$secondary: #835e5e;
 $link: #807e7e;
 
 //Custom styling
@@ -53,7 +53,8 @@ $size-1: 2.25rem;
 $button-border-width: 0;
 
 
-
+//Menubar
+$menu-item-color: #1473e6;
 
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
@@ -87,6 +88,9 @@ $button-border-width: 0;
 .mt3 {
   margin-top: 3rem!important;
 }
+.mt4 {
+  margin-top: 4rem!important;
+}
 .mt5{
   margin-top: 5.625rem!important;
 }
@@ -107,10 +111,16 @@ $button-border-width: 0;
   margin-right: 2rem;
 }
 
-//Input box css
-.input {
-  border-width: 1px;
+//custom padding
+.pd0{
+  padding: 0 !important;
 }
+.pd1{
+  padding: 1rem !important;
+}
+
+//Input box css
+
 
 .button{
   border-radius: 0;
@@ -119,4 +129,15 @@ $button-border-width: 0;
 //mouse hand cursoe
 .handCursor{
     cursor: pointer;
+}
+
+//navbar
+.navbar{
+  background-color: #FDF5E6;
+}
+
+//random css
+html, body {
+  height:100%;
+  min-height:100%; 
 }
