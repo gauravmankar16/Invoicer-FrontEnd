@@ -53,7 +53,7 @@
       <div class="column is-2" style="100vh">
         <side-bar></side-bar>
       </div>
-      <div class="column has-background-white-ter" style="height:100%">
+      <div class="column has-background-white-bis" style="height:100%">
         <router-view></router-view>
       </div>
     </div>

@@ -64,6 +64,10 @@ export default {
     // min-height: 100vh;
   }
 }
+.b-sidebar{
+  margin-top: -11px;
+    width: 217px !important;
+}
 @media screen and (max-width: 1023px) {
   .b-sidebar {
     .sidebar-content {

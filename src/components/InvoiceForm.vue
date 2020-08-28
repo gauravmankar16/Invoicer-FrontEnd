@@ -23,6 +23,7 @@
               icon="calendar-today"
               size="is-small"
               trap-focus
+              v-model="invoice.dueDate"
             />
           </b-field>
           <b-field label="Invoice Number">
@@ -208,6 +209,7 @@ export default {
         payerName: "",
         payerEmail: "",
         invoiceNo: "",
+        dueDate: "",
       },
       columns: [
         {
@@ -238,7 +240,7 @@ export default {
       isHoverable: false,
       isFocusable: true,
       count: 0,
-      dTotal: 0
+      dTotal: 0,
     };
   },
   mounted() {
@@ -299,9 +301,9 @@ export default {
       axios
         .post(baseURL + "api/saveInvoice", { ...this.$data.invoice })
         .then((response) => {
-          console.log(response);
+          console.log(response.data.id);
+          this.$router.push("/channel?invoiceid=" + response.data.id);
         });
-      this.$router.push("/channel");
       console.log(this.$data.invoice);
     },
     discountTotal(e) {
@@ -309,9 +311,10 @@ export default {
         this.$data.invoice.total = this.dTotal;
       } else {
         this.count += 1;
-        this.dTotal = this.$data.invoice.total;        
+        this.dTotal = this.$data.invoice.total;
       }
-      this.$data.invoice.total = this.$data.invoice.total - ((this.$data.invoice.total * e) / 100);
+      this.$data.invoice.total =
+        this.$data.invoice.total - (this.$data.invoice.total * e) / 100;
     },
   },
 };
